@@ -1,4 +1,4 @@
-import { IClientRepository, IPurchaseRepository } from "../repositories";
+import { IClientRepository, IPurchaseRepository } from "@/app/repositories";
 
 export class ListClientsByTotalPurchaseValueUseCase {
   constructor(

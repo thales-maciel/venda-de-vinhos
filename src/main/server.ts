@@ -2,10 +2,10 @@ import "module-alias/register";
 
 import express from "express";
 
-import { makeListClientsByTotalPurchaseValueController } from "./factories/controllers/listClientsByTotalPurchaseValue";
-import { makeListClientsByFidelity } from "./factories/controllers/listClientsByFidelity";
-import { makeRecommendWineController } from "./factories/controllers/recommendWine";
-import { makeFindBiggestPurchaseClientController } from "./factories/controllers/findBiggestPurchaseClient";
+import { makeListClientsByTotalPurchaseValueController } from "@/main/factories/controllers/listClientsByTotalPurchaseValue";
+import { makeListClientsByFidelity } from "@/main/factories/controllers/listClientsByFidelity";
+import { makeRecommendWineController } from "@/main/factories/controllers/recommendWine";
+import { makeFindBiggestPurchaseClientController } from "@/main/factories/controllers/findBiggestPurchaseClient";
 
 const app = express();
 

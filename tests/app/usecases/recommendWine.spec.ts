@@ -11,7 +11,7 @@ const makeSut = (purchases: Purchase[]) => {
 
 describe("Recommend Wine Use Case", () => {
   it("Should return the closest item to the preferences", async () => {
-    const purchases: Array<Purchase> = makePurchases([
+    const purchases: Purchase[] = makePurchases([
       {
         cliente: 1,
         items: makeItems([
@@ -34,7 +34,7 @@ describe("Recommend Wine Use Case", () => {
   });
 
   it("should consider a stronger preference if a preference appears more than once", async () => {
-    const purchases: Array<Purchase> = makePurchases([
+    const purchases: Purchase[] = makePurchases([
       {
         cliente: 1,
         items: makeItems([

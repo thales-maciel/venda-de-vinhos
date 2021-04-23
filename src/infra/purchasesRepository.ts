@@ -6,7 +6,7 @@ type PurchaseApiDTO = {
   codigo: string;
   data: string;
   cliente: string;
-  itens: Array<ItemApiDTO>;
+  itens: ItemApiDTO[];
   valorTotal: number;
 };
 

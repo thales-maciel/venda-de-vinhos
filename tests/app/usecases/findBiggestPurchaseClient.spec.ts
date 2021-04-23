@@ -4,7 +4,7 @@ import {
   FakeClientRepository,
   FakePurchaseRepository,
 } from "@/tests/mocks/mockRepositories";
-import { FindBiggestPurchaseClientUseCase } from "@/app/usecases/FindBiggestPurchaseClient";
+import { FindBiggestPurchaseClientUseCase } from "@/app/usecases/findBiggestPurchaseClient";
 
 const makeSut = (clients: Client[], purchases: Purchase[]) => {
   return {
@@ -17,9 +17,9 @@ const makeSut = (clients: Client[], purchases: Purchase[]) => {
 
 describe("Find Biggest Purchase Client Use Case", () => {
   it("Returns the client who made the biggest purchase in 2016", async () => {
-    const clients: Array<Client> = makeClients([{ id: 1 }, { id: 2 }]);
+    const clients: Client[] = makeClients([{ id: 1 }, { id: 2 }]);
 
-    const purchases: Array<Purchase> = makePurchases([
+    const purchases: Purchase[] = makePurchases([
       { cliente: 1, valorTotal: 41, data: new Date("01-01-2016") },
       { cliente: 2, valorTotal: 40, data: new Date("01-01-2016") },
       { cliente: 2, valorTotal: 40, data: new Date("01-01-2016") },

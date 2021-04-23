@@ -2,7 +2,7 @@ import { Item, Purchase } from "@/domain/entities";
 import { IPurchaseRepository } from "@/app/repositories";
 
 class ScoreCalculator {
-  constructor(private preferences: { [key: string]: Array<any> }) {}
+  constructor(private preferences: { categoria: any[]; variedade: any[] }) {}
 
   private calculateKeyScore = (key: string, value: any) => {
     return this.preferences[key].reduce(
@@ -45,9 +45,9 @@ export class RecommendWineUseCase {
   };
 
   private getParametrizedItems = (
-    purchases: Array<Purchase>,
+    purchases: Purchase[],
     clientId: number
-  ): Array<Array<Item>> => {
+  ): Item[][] => {
     let purchasedItems = [];
     let notPurchasedItems = [];
 
@@ -68,7 +68,7 @@ export class RecommendWineUseCase {
     return [purchasedItems, notPurchasedItems];
   };
 
-  private generateClientPreferences = (purchasedItems: Array<Item>) => {
+  private generateClientPreferences = (purchasedItems: Item[]) => {
     let preferences = {
       categoria: [],
       variedade: [],

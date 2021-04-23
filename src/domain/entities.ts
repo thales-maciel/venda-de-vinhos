@@ -26,6 +26,6 @@ export class Purchase {
   codigo: string;
   data: Date;
   cliente: number;
-  items: Array<Item>;
+  items: Item[];
   valorTotal: number;
 }

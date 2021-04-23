@@ -17,13 +17,9 @@ const makeSut = (clients: Client[], purchases: Purchase[]) => {
 
 describe("List client by purchase Use Case", () => {
   it("orders clients by purchase value", async () => {
-    const clients: Array<Client> = makeClients([
-      { id: 1 },
-      { id: 2 },
-      { id: 3 },
-    ]);
+    const clients: Client[] = makeClients([{ id: 1 }, { id: 2 }, { id: 3 }]);
 
-    const purchases: Array<Purchase> = makePurchases([
+    const purchases: Purchase[] = makePurchases([
       { cliente: 1, valorTotal: 1 },
       { cliente: 2, valorTotal: 1 },
       { cliente: 2, valorTotal: 1 },

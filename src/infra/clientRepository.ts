@@ -1,5 +1,5 @@
 import { IClientRepository } from "@/app/repositories";
-import { getUrl } from "./httpClient";
+import { getUrl } from "@/infra/httpClient";
 
 export class ClientRepository implements IClientRepository {
   getAllClients = async () => {
