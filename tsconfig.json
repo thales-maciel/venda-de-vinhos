@@ -1,9 +1,15 @@
 {
   "compilerOptions": {
+    "outDir": "dist",
     "baseUrl": "src",
-    "rootDir": "src",
+    "rootDirs": ["src", "../tests/*"],
+    "sourceMap": true,
     "paths": {
+      "@/tests/*": ["../tests/*"],
       "@/*": ["*"]
-    }
-  }
+    },
+    "esModuleInterop": true
+  },
+  "include": ["src", "tests"],
+  "exclude": []
 }
